@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
 <head>
-  <meta charset="utf-8">
-  <title>JS Bin</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/majac-css/build/majac.css">
+  <link rel="stylesheet" href="../style.css"> 
   <script src="../node_modules/angular/angular.min.js"></script>
   <script type="text/javascript">
     var app = angular.module('myApp', []);
@@ -24,17 +26,40 @@
   </script>
 </head>
 <body>
-  <h3>communication between controllers, new way</h3>
-  <div ng-controller="Controller0">
-      {{me}} :<input ng-model="text">
+
+  <ng-include src="'../nav.html'"></ng-include>
+
+  <div class="container">
+    <div class="margin-bottom-50">
+      <a href="/" role="button" class="btn btn-primary">Tree</a>
+      <a href="index2.html" role="button" class="btn btn-primary">Inherit</a>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>communication between controllers, new way</h3>
+      </div>
+      <div class="col-sm-12" ng-controller="Controller0">
+        <label class="textsize-lg" for="">{{me}} :</label>
+        <div class="input-group">
+          <input type="text" ng-model="text" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller1">
+        <label class="textsize-lg" for="">{{me}} :</label>
+        <div class="input-group">
+          <input type="text" ng-model="text" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller2 as ctrl2">
+        <label class="textsize-lg" for="">{{ctrl2.me}} :</label>
+        <div class="input-group">
+          <input type="text" ng-model="text" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div ng-controller="Controller1">
-      {{me}} :<input ng-model="text" >
-  </div>
+  <ng-include src="'../footer.html'"></ng-include>
 
-  <div ng-controller="Controller2 as ctrl2">
-      {{ctrl2.me}} :<input ng-model="text" >
-  </div>
 </body>
 </html>

@@ -9,7 +9,6 @@ function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-  // .state([[name]], {option})
   .state('main', {
     url: '/',
     templateUrl: 'pages/main/main.html',
@@ -22,7 +21,8 @@ function ($stateProvider, $urlRouterProvider) {
   })
   .state('subpage2', {
     url: '/subpage2',
-    template: '<div>hihihi</div>',
+    templateUrl: 'pages/subpage/subpage2.html',
+    // template: '<div>hihihi</div>',
   })
 
 }]);

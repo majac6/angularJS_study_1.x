@@ -5,7 +5,7 @@ angular
 .config(['$stateProvider', '$urlRouterProvider',  function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
   // $locationProvider.hashPrefix('');
-  $urlRouterProvider.otherwise("/home");
+  // $urlRouterProvider.otherwise("/home");
 
   $stateProvider
   .state('home', {
@@ -14,11 +14,11 @@ angular
   })
   .state('home.two', {
     // parent: 'home',
-    url: '/home/two',
+    url: '/two',
     template: '<two-component></two-component>'
   })
   .state('home.two.three', {
-    parent: 'home',
+    // parent: 'two',
     url: '/three',
     template: '<three-component></three-component>'
   })

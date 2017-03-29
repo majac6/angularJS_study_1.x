@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
 <head>
-  <meta charset="utf-8">
-  <title>JS Bin</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/majac-css/build/majac.css">
+  <link rel="stylesheet" href="../style.css"> 
   <script src="../node_modules/angular/angular.min.js"></script>
   <script type="text/javascript">
     var app = angular.module('myApp', []);
@@ -14,18 +16,41 @@
     });
   </script>
 </head>
-<body ng-controller="Controller0 as main">
-  <h3>communication between controllers, new way</h3>
-  <div>
-      Controller0 :<input ng-model="main.text">
+<body>
+
+  <ng-include src="'../nav.html'"></ng-include>
+
+  <div class="container" ng-controller="Controller0 as main">
+    <div class="margin-bottom-50">
+      <a href="/07_controller_tree/index.html" role="button" class="btn btn-primary">Tree</a>
+      <a href="./index2.html" role="button" class="btn btn-primary">Inherit</a>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>communication between controllers, new way</h3>
+      </div>
+      <div class="col-sm-12">
+        <label class="textsize-lg" for="">Controller0 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="main.text" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller1">
+        <label class="textsize-lg" for="">Controller1 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="main.text" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller2">
+        <label class="textsize-lg" for="">Controller2 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="main.text" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div ng-controller="Controller1">
-      Controller1 :<input ng-model="main.text" >
-  </div>
+  <ng-include src="'../footer.html'"></ng-include>
 
-  <div ng-controller="Controller2">
-      Controller2 :<input ng-model="main.text" >
-  </div>
 </body>
 </html>

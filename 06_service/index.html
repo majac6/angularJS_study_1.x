@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
 <head>
-  <meta charset="utf-8">
-  <title>JS Bin</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/majac-css/build/majac.css">
+  <link rel="stylesheet" href="../style.css"> 
   <script src="../node_modules/angular/angular.min.js"></script>
   <script type="text/javascript">
 
@@ -36,20 +38,35 @@ app.factory('sharedService', function() {
 </head>
 <body>
 
-<h3>communication between controllers, new way</h3>
-<div ng-controller="Controller0">
-    Controller0 :<input ng-model="sharedService.messageToShare" ng-change="handleClick();">
-    <button ng-click="handleClick();">share</button>
-</div>
+  <ng-include src="'../nav.html'"></ng-include>
 
-<div ng-controller="Controller1">
-    Controller1 :<input ng-model="sharedService.sharingMessage" >
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>communication between controllers, new way</h3>
+      </div>
+      <div class="col-sm-12" ng-controller="Controller0">
+        <label class="textsize-lg" for="">Controller0 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="sharedService.messageToShare" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller1">
+        <label class="textsize-lg" for="">Controller1 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="sharedService.sharingMessage" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+      <div class="col" ng-controller="Controller2">
+        <label class="textsize-lg" for="">Controller2 :</label>
+        <div class="input-group">
+          <input type="text" ng-model="sharedService.sharingMessage" ng-change="handleClick();" class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div ng-controller="Controller2">
-    Controller2 :<input ng-model="sharedService.sharingMessage" >
-</div>
-
+  <ng-include src="'../footer.html'"></ng-include>
 
 </body>
 </html>

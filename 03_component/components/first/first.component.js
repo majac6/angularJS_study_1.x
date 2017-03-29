@@ -9,11 +9,5 @@ angular
 .component('firstComponent', {
   // 컴포넌트 이름 이 이름을 html 으로 사용시 <first-component></first-component> 으로 사용해야 함.
   templateUrl: 'components/first/first.tem.html',
-  scope: {
-    attr1: '='
-  },
-  controller: function() {
-    
-  }
   // template: '<div>hihihihi</div>',
 });

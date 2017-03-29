@@ -1,13 +1,24 @@
 <!doctype html>
 <html ng-app="angularStart">
-  <head>
-    <meta charset="utf-8">
-    <link rel="styleSheet" href="../node_modules//angular-ui-grid/ui-grid.min.css"/>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/majac-css/build/majac.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="styleSheet" href="../node_modules//angular-ui-grid/ui-grid.min.css"/>
+</head>
+<body>
+  <ng-include src="'../nav.html'"></ng-include>
+  <div class="container">
+    <div class="margin-bottom-50">
+      <a href="#!/home" role="button" class="btn btn-primary">home</a>
+      <a href="#!/home/two" role="button" class="btn btn-primary">two</a>
+      <a href="#!/home/two/three" role="button" class="btn btn-primary">three</a>
+    </div>
     <ui-view></ui-view>
-  </body>
-
+  </div>
+  <ng-include src="'../footer.html'"></ng-include>
+</body>
 <script type="text/javascript">
   var ASF_GLOBAL = {deployed: true, serverHost:"http://52.78.228.64:8080/General"};
 </script>
