@@ -1,0 +1,384 @@
+/*Renault #F8B101 onHover #FFCC00*/
+/* Nissan #DD0614 onHover #FF1222*/
+/* line 7, ../sass/style-sass-renault.scss */
+.row {
+  max-width: 100%;
+}
+
+/* line 12, ../sass/style-sass-renault.scss */
+button-side-nav:hover, button-side-nav:focus {
+  background-color: #FFCC00;
+}
+
+/* line 18, ../sass/style-sass-renault.scss */
+.button-side-nav:hover, .button-side-nav:focus {
+  background-color: #FFCC00;
+}
+
+/* line 24, ../sass/style-sass-renault.scss */
+button-side-nav:hover, button-side-nav:focus {
+  color: #FFFFFF;
+}
+
+/* line 30, ../sass/style-sass-renault.scss */
+.button-side-nav:hover, .button-side-nav:focus {
+  color: #FFFFFF;
+}
+
+/* line 35, ../sass/style-sass-renault.scss */
+.transparent-top-bar {
+  background-color: transparent;
+}
+
+/*Button customize*/
+/* line 41, ../sass/style-sass-renault.scss */
+.btn-rnlt {
+  background-color: #F8B101;
+}
+
+/* line 44, ../sass/style-sass-renault.scss */
+.btn-search {
+  background-color: #F8B101;
+  border: 1px solid #F8B101;
+}
+
+/* line 48, ../sass/style-sass-renault.scss */
+.font-rnlt {
+  color: #F8B101;
+  font-size: 0.6675rem;
+}
+
+/* line 54, ../sass/style-sass-renault.scss */
+button:hover, button:focus {
+  background-color: #FFCC00;
+}
+
+/* line 60, ../sass/style-sass-renault.scss */
+.button:hover, .button:focus {
+  background-color: #FFCC00;
+}
+
+/*input text in Top Bar*/
+/* #searchKey {
+	background: #fff url(../img/search-icon.png) right;
+	background-repeat: no-repeat;
+	border-radius: 5px 0 0 5px;
+} */
+/*shopping cart*/
+/* line 74, ../sass/style-sass-renault.scss */
+.cart {
+  background: url(../img/shopping_cart9.png) right;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  height: 45px;
+  width: 45px;
+}
+
+/* line 82, ../sass/style-sass-renault.scss */
+.cart_number {
+  color: #F00;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0.1rem;
+  font: 0.6rem Arial;
+  background: #F8B101;
+}
+
+/* line 93, ../sass/style-sass-renault.scss */
+.cart_animation:hover {
+  padding: 2px 0 0 0px;
+}
+
+/*Init Table*/
+/* line 99, ../sass/style-sass-renault.scss */
+.item-list {
+  border: 2px solid #f4f4f4;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+/* line 106, ../sass/style-sass-renault.scss */
+.item-filter {
+  padding: 0px;
+  color: #666;
+}
+
+/* line 111, ../sass/style-sass-renault.scss */
+.item-list:hover {
+  -webkit-box-shadow: 0 0 10px #666;
+  -moz-box-shadow: 0 0 10px #666;
+  box-shadow: 0 0 10px #666;
+}
+
+/*input*/
+/* line 119, ../sass/style-sass-renault.scss */
+input.radius {
+  border: 1px solid #F8B101;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 1px #F8B101;
+}
+/* line 124, ../sass/style-sass-renault.scss */
+input.radius:focus {
+  border-color: #FFCC00;
+}
+
+/*Icon bar*/
+/* line 131, ../sass/style-sass-renault.scss */
+.icon-bar > * {
+  font-size: 1rem;
+  padding: 1.5rem;
+  background: #f4f4f4;
+  height: 4rem;
+}
+/* line 137, ../sass/style-sass-renault.scss */
+.icon-bar > * label {
+  color: #4A4A4A;
+  font-weight: bold;
+}
+
+/* line 143, ../sass/style-sass-renault.scss */
+.nav_menu {
+  border-radius: 0 0 6px 6px;
+}
+
+/* line 147, ../sass/style-sass-renault.scss */
+.icon-bar > a:hover {
+  background: #F8B101;
+}
+
+/* 
+menu drop down Button*/
+/* line 154, ../sass/style-sass-renault.scss */
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: #F8B101;
+  color: #FFFFFF;
+  line-height: 2.8125rem;
+  padding: 0 0.9375rem;
+}
+/* line 160, ../sass/style-sass-renault.scss */
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: #F8B101;
+  color: #FFFFFF;
+}
+
+/* .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+        background: #333333;
+        color: #FFFFFF; } 
+.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
+        background-color: #555555;
+        color: #FFFFFF;
+        background: #222222; }    */
+/* .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
+        color: #FFFFFF;
+        background-color: #555555;
+        background: $btn-color-hover; 
+}
+.top-bar-section li.active:not(.has-form) a:not(.button):not(.menu_label):hover {
+        background: $btn-color-hover;
+        color: #FFFFFF; }   */
+/*  .top-bar-section ul li>button {
+	font-size: 0.8125rem;
+	padding-right: 0.9375rem;
+	padding-left: 0.9375rem;
+	background-color: $btn-color;
+	border-color: $btn-color;
+	color: #FFFFFF;
+}
+
+.top-bar-section ul li>button:hover,.top-bar-section ul li>button:focus
+	{
+	background-color: $btn-color-hover;
+}
+
+.top-bar-section ul li>button:hover,.top-bar-section ul li>button:focus
+	{
+	color: #FFFFFF;
+}  
+      
+      
+        .top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a {
+          color: #FFFFFF;
+          display: block; }
+          .top-bar-section .dropdown li.title h5 a:hover, .top-bar-section .dropdown li.parent-link a:hover {
+            background-color: #555555;
+        background: #555555;
+         }
+            
+   */
+/*Drop down*/
+/* line 214, ../sass/style-sass-renault.scss */
+.menu_dropdown {
+  background: #f4f4f4;
+  height: auto;
+}
+
+/*range-slider*/
+/* line 221, ../sass/style-sass-renault.scss */
+.range-slider-handle:hover {
+  background: #FFCC00;
+}
+
+/* line 225, ../sass/style-sass-renault.scss */
+#footer {
+  background: #F8B101;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1.5rem;
+  background: #fff;
+  margin-bottom: 0;
+  color: #222;
+}
+/* line 236, ../sass/style-sass-renault.scss */
+#footer p {
+  color: #222;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 246, ../sass/style-sass-renault.scss */
+.orbit-container {
+  overflow: hidden;
+  width: 100%;
+  align: center;
+  position: relative;
+  background: none;
+}
+
+/* line 254, ../sass/style-sass-renault.scss */
+.rn_image {
+  background: url(../img/Renault-Nissan_Alliance_logo.png) right;
+  background-repeat: no-repeat;
+  background-size: 128px 35px;
+  height: 45px;
+}
+
+/* line 261, ../sass/style-sass-renault.scss */
+.breadcrumbs {
+  border-style: solid;
+  border-width: 0px;
+  background-color: white;
+}
+
+/* line 267, ../sass/style-sass-renault.scss */
+.menu-font {
+  color: #FFCC00;
+  float: left;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.4rem 0.2rem 0.4rem 0rem;
+}
+
+/* line 276, ../sass/style-sass-renault.scss */
+.message-box {
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 285, ../sass/style-sass-renault.scss */
+.sticky-message-bar {
+  background-color: #43AC6A;
+}
+
+/* line 289, ../sass/style-sass-renault.scss */
+.contain-to-grid {
+  width: 100%;
+  background: #43AC6A;
+}
+
+/* line 294, ../sass/style-sass-renault.scss */
+.edit_table_success_message {
+  position: fixed;
+  margin: auto;
+  width: 280px;
+  height: 25px;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #43AC6A;
+  border-color: #3a945b;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.8125rem;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* line 312, ../sass/style-sass-renault.scss */
+.edit_table_success_message_close {
+  position: fixed;
+  margin: auto;
+  width: 20px;
+  height: 25px;
+  top: 10px;
+  left: 230px;
+  right: 0;
+  z-index: 1000;
+  background-color: #43AC6A;
+  border-color: #3a945b;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.8125rem;
+  text-align: center;
+  line-height: 25px;
+}
+
+/*  CUSTOM CSS STARTS HERE */
+/* line 333, ../sass/style-sass-renault.scss */
+.grid .ui-grid-render-container-body .ui-grid-header-cell, .grid .ui-grid-render-container-left .ui-grid-header-cell, .grid .ui-grid-row {
+  height: 30px !important;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: #222;
+}
+/* line 340, ../sass/style-sass-renault.scss */
+.grid .ui-grid-cell {
+  height: 30px !important;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: #222;
+}
+/* line 346, ../sass/style-sass-renault.scss */
+.grid .ui-grid-cell .ui-grid-vertical-bar {
+  height: 30px !important;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: #222;
+}
+.uploadButton { 
+    border: none;
+    border-radius: 3px;
+ 	color:#FAF9F7;
+ 	background:#F8B101;
+    display: inline-block;
+    height: 30px;
+    margin-right:15px;
+    width: auto;
+    padding:0 20px;
+    box-sizing: content-box;
+}
+.uploadButton :hover { 
+    border: none;
+    border-radius: 3px;
+ 	color:#FAF9F7;
+ 	background-hover:#FFCC00;
+    display: inline-block;
+    height: 30px;
+    margin-right:15px;
+    width: auto;
+    padding:0 20px;
+    box-sizing: content-box;
+}

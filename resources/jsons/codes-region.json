@@ -1,0 +1,23 @@
+[
+  {
+    "codeVal": "10",
+    "codeName": "HQ/영업",
+    "codeNameEn": "HQ/Sales",
+    "notice": "[HQ/영업] 보안관리 전화 : 02-3707-5002",
+    "noticeEn": "[HQ/Sales] : 02-3707-5002"
+  },
+  {
+    "codeVal": "20",
+    "codeName": "생산",
+    "codeNameEn": "Plant",
+    "notice": "[생산] 김도헌 과장 : 051-979-7303",
+    "noticeEn": "[Plant] : 051-979-7303"
+  },
+  {
+    "codeVal": "30",
+    "codeName": "연구소",
+    "codeNameEn": "Lab",
+    "notice": "[연구소] 최수현 : 031-289-8990",
+    "noticeEn": "[Lab] : 031-289-8990"
+  }
+]

@@ -1,0 +1,25 @@
+[
+		{
+			"title": "All Day Event",
+			"start": "2016-11-05"
+		},
+		{
+			"title": "Long Event",
+			"start": "2016-11-07",
+			"end": "2016-11-10"
+		},
+		{
+			"title": "Birthday Party",
+			"start": "2016-11-13T07:00:00"
+		},
+		{
+			"title": "Time Test1",
+			"start": "2016-12-07T09:00:00",
+			"end": "2016-12-07T12:00:00"
+		},
+		{
+			"title": "Time Test2",
+			"start": "2016-12-07T14:00:00",
+			"end": "2016-12-07T16:00:00"
+		}
+]

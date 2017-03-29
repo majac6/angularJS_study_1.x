@@ -1,0 +1,75 @@
+strong {
+  color: map-get($colors, 'primary');
+}
+
+@for $i from 1 through 6 {
+	.h#{$i} {
+		font-size: 2.5rem - (0.35 * $i);
+    font-weight: normal;
+	}
+}
+
+@for $i from 0 through 100 {
+
+  .textIndent-#{$i}p {
+    text-indent: percentage($i * 0.01);
+  }
+
+  .textIndent-#{$i} {
+    text-indent: #{$i}px;
+  }
+
+}
+
+@each $item, $i in $textsize {
+  .textsize-#{$item} {
+    font-size: #{$i};
+  }
+}
+
+// End Text Size
+
+@each $item, $i in $textAlign {
+  .textAlign-#{$item},
+  .text-#{$item} {
+    text-align: #{$i};
+  }
+}
+
+// End Text Align
+
+@each $item, $i in $colors {
+  .text-#{$item} {
+    color: #{$i};
+  }
+  $item: #{$i};
+}
+
+@each $item, $i in $letterspace {
+  .textletter-#{$item} {
+    letter-spacing: #{$i};
+  }
+}
+
+.whiteSpace-nowrap {
+  white-space: nowrap;
+}
+
+.text-cut {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media (max-width: $mobileMaxWidth) {
+
+  @each $item, $i in $textAlign {
+    .textAlign-#{$item}-m,
+    .text-#{$item}-m {
+      text-align: #{$i};
+    }
+  }
+
+  // End Mobile Text Align
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller('Controller0', function($scope) {    
+    });
+    app.controller('Controller1', function($scope) {
+    });
+    app.controller('Controller2', function($scope) {
+    });
+  </script>
+</head>
+<body ng-controller="Controller0 as main">
+  <h3>communication between controllers, new way</h3>
+  <div>
+      Controller0 :<input ng-model="main.text">
+  </div>
+
+  <div ng-controller="Controller1">
+      Controller1 :<input ng-model="main.text" >
+  </div>
+
+  <div ng-controller="Controller2">
+      Controller2 :<input ng-model="main.text" >
+  </div>
+</body>
+</html>

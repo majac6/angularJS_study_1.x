@@ -1,0 +1,41 @@
+[
+    {
+        "userId": "k021489",
+        "description": "IST",
+        "insDate": "20151217",
+        "insTime": "191500",
+        "insUser": "pk00381",
+        "name": "권태근",
+        "status": "Y",
+        "updDate": null,
+        "updTime": null,
+        "updUser": null,
+        "userGrade": "02"
+    },
+    {
+        "userId": "k101224",
+        "description": "IST",
+        "insDate": "20151217",
+        "insTime": "191500",
+        "insUser": "pk00381",
+        "name": "허서연",
+        "status": "Y",
+        "updDate": null,
+        "updTime": null,
+        "updUser": null,
+        "userGrade": "02"
+    },
+    {
+        "userId": "k021480",
+        "description": "IST",
+        "insDate": "20151217",
+        "insTime": "191500",
+        "insUser": "pk00381",
+        "name": "권태근2",
+        "status": "N",
+        "updDate": null,
+        "updTime": null,
+        "updUser": null,
+        "userGrade": "02"
+    }
+]

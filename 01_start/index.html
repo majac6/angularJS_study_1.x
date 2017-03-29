@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/majac-css/build/majac.css">
+  <link rel="stylesheet" href="../style.css"> 
+  <script src="../node_modules/angular/angular.min.js"></script>
+
+  <script type="text/javascript">
+    'use strict'
+
+    var app = angular.module("app", []);
+    // 최초 angularjs 모듈 선언.
+
+    app.controller("MainController", function($scope) {
+      $scope.msg = 'hello';
+      this.msg = 'world';
+    });
+    // 컨트롤러 선언하기.
+  </script>
+</head>
+<body ng-app="app">
+  <!-- body를  angularjs app 으로 설정함. 개발자에 따라 html에 선언하는 경우도 있음. -->
+
+  <ng-include src="'../nav.html'"></ng-include>
+
+  <div class="container" ng-controller="MainController as main">
+    <div class="row">
+      <div class="col">
+        <label class="textsize-lg" for="">MainController msg: <b class="text-blue">{{msg}}</b></label>
+        <div class="input-group">
+          <input type="text" ng-model="msg" class="form-control">
+        </div>
+      </div>
+      <div class="col">
+        <label class="textsize-lg" for="">MainController this.msg : <b class="text-blue">{{main.msg}}</b></label>
+        <div class="input-group">
+          <input type="text" ng-model="main.msg" class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-include src="'../footer.html'"></ng-include>
+  
+</body>
+</html>

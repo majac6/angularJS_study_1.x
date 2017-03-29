@@ -1,0 +1,52 @@
+[
+	{
+		"id": {
+			"userId": "k001737",
+			"subDate": "20160201",
+			"resvDate": "20160201",
+			"roomNo": "30016",
+			"submitSTime": "1230"
+		},
+		"confirm": "A",
+		"deptnm": "파워트레인팀",
+		"edeptnm": "Power-train Team",
+		"empno": "k001737",
+		"ename": "BYOUNGHAN CHOI",
+		"finalETime": null,
+		"finalSTime": null,
+		"insDate": "20160201",
+		"insTime": "121051",
+		"insUser": "k001737",
+		"name": "최병한",
+		"percnt": null,
+		"purpose": null,
+		"secyn": "N",
+		"submitETime": "1400",
+		"telno": null
+	},
+	{
+		"id": {
+			"userId": "k062201",
+			"subDate": "20160201",
+			"resvDate": "20160201",
+			"roomNo": "30016",
+			"submitSTime": "1600"
+		},
+		"confirm": "A",
+		"deptnm": "현가제동성능섹션(DE-TVC)",
+		"edeptnm": "DE-TVC Ride Handling & Brake Performance Section",
+		"empno": "k062201",
+		"ename": "WOOKYUN YOO",
+		"finalETime": null,
+		"finalSTime": null,
+		"insDate": "20160201",
+		"insTime": "141545",
+		"insUser": "k062201",
+		"name": "유우균",
+		"percnt": "2",
+		"purpose": "LFD회의",
+		"secyn": "N",
+		"submitETime": "1800",
+		"telno": "8258"
+	}
+]

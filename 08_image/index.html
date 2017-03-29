@@ -1,0 +1,95 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+<style>
+.thumb {
+    width: 200px;
+    height: 200px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+</style>
+</head>
+<body ng-app="fileUpload" ng-controller="MyCtrl">
+  <!-- body를  angularjs app 으로 설정함. 개발자에 따라 html에 선언하는 경우도 있음. -->
+
+    <div class="button" ngf-drop ngf-select ng-model="files" ngf-multiple="true" accept="image/*">select</div>
+    
+  <br>
+  Files:
+  <ul>
+    <li ng-repeat="f in files" style="font:smaller">
+      <img height="100px" ngf-src="f"> <!-- image preview -->
+      {{f.name}} {{f.$error}} {{f.$errorParam}}
+      <span class="progress" ng-show="f.progress >= 0">
+        <div style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
+      </span>
+    </li>     
+  </ul>
+  {{errorMsg}}
+
+  <button ng-click="uploadFiles(files)">Submit</button>
+
+</body>
+
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+
+<script type="text/javascript">
+var app = angular.module("app", ['ngFileUpload']);
+// 최초 angularjs 모듈 선언.
+
+var url = 'http://localhost:8080/ci/file/'
+ 
+app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', function ($scope, Upload, $timeout) {
+    $scope.uploadFiles = function(files) {
+
+      $scope.files = files;
+      angular.forEach(files, function(file) {
+        if (file && !file.$error) {
+          file.upload = Upload.upload({
+            // url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+            url: url + 'upload',
+            file: file
+          });
+
+          file.upload.then(
+            function (response) {
+              console.log(response);
+              $timeout(function () {
+                file.result = response.data;
+              });
+            },
+            function (response) {
+              if (response.status > 0) $scope.errorMsg = response.status + ': ' + response.data;
+            }
+          );
+
+          file.upload.progress(function (evt) {
+            file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+          });
+        }   
+      });
+    }
+}]);
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+.margin-bottom-15 {
+	margin-bottom: 15px;
+}
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+.margin-left-10 {
+	padding-left: 10px;
+}
+.footer {
+  margin-top: 0.5rem;
+  background-color: #2980b9;
+  padding: 0.2rem 4rem;
+  text-align: center;
+  color: #fff;
+}
+.footer p {
+  margin-right:5px;
+  margin-bottom:0px;
+}
+.footer span, .footer a {
+  font-weight: bold;
+  font-size: .8em;
+  color: #fff;
+  margin-left:5px;
+}
+
+.title-bar {
+  background: #e6e6e6;
+  padding: 1rem;
+  color: #2199e8;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+  }
+}
+.asf-grid .grid {
+	height: 330px;
+}
+
+.min-width-100 {
+	min-width: 100px;
+}
+
+.button.tiny {
+	font-size: 0.8rem !important;
+}
+
+.button.small {
+	font-size: 0.8rem !important;
+}
+
+.page_title {
+	color:#FC5A19;
+	font-size : 1em;
+	font-weight:bold;
+}
+
+.label-middle {
+	padding-top : 0.5625rem;
+}
+
+.width-70{
+  width:70%;
+}
+
+.width-60{
+  width:60%;
+}
+
+.fieldset legend {
+	font-size : 14px;
+	font-weight: bold;
+}
+
+.fieldset-min-200 {
+	min-height:200px;
+}
+
+#roomListSet {
+	overflow-y : auto;
+	height : 350px;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="angularStart">
+  <head>
+    <meta charset="utf-8">
+    <link rel="styleSheet" href="../node_modules/angular-ui-grid/ui-grid.min.css"/>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.css">
+    <link rel="stylesheet" href="../asset/fullcalendar/dist/fullcalendar.css"/>
+  </head>
+  <body>
+    <ui-view></ui-view>
+  </body>
+
+<script type="text/javascript">
+  var ASF_GLOBAL = {deployed: true, serverHost:"http://52.78.228.64:8080/General"};
+</script>
+<!-- Script 부분을 body 하단으로 옮김, Document.ready 의 효과가 있다. -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/moment/min/moment.min.js"></script>
+<script src="../node_modules/foundation-sites/dist/js/foundation.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../node_modules/angular-ui-grid/ui-grid.min.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="../asset/angular-foundation-6/dist/angular-foundation.min.js"></script>
+<script src="../node_modules/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="../node_modules/fullcalendar/dist/locale/ko.js"></script>
+<script src="app.js"></script>
+<script src="factory.js"></script>
+<script src="components/first/first.module.js"></script>
+<script src="components/first/first.component.js"></script>
+<script src="components/two/two.module.js"></script>
+<script src="components/two/two.component.js"></script>
+<!-- <script src="components/three/three.module.js"></script> -->
+<script src="components/three/three.component.js"></script>
+</html>

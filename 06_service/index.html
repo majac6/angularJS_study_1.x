@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript">
+
+var app = angular.module('myApp', []);
+
+app.controller('Controller0', function($scope,sharedService) {
+  $scope.sharedService = sharedService;
+    
+  $scope.handleClick = function() {
+    //if you really want ...
+    sharedService.sharingMessage = sharedService.messageToShare;
+  };
+});
+
+app.controller('Controller1', function($scope,sharedService) {
+  $scope.sharedService = sharedService;
+});
+
+app.controller('Controller2', function($scope,sharedService) {
+  $scope.sharedService = sharedService;
+});
+
+app.factory('sharedService', function() {
+    var shared = {};
+    shared.messageToShare = '';
+    shared.sharingMessage = '';
+   
+    return shared;
+});
+  </script>
+</head>
+<body>
+
+<h3>communication between controllers, new way</h3>
+<div ng-controller="Controller0">
+    Controller0 :<input ng-model="sharedService.messageToShare" ng-change="handleClick();">
+    <button ng-click="handleClick();">share</button>
+</div>
+
+<div ng-controller="Controller1">
+    Controller1 :<input ng-model="sharedService.sharingMessage" >
+</div>
+
+<div ng-controller="Controller2">
+    Controller2 :<input ng-model="sharedService.sharingMessage" >
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<h1 style="text-align: center;"><b>Grid And Form</b></h1>
+<!-- http://foundation.zurb.com/sites/docs/grid.html -->
+<div class="row display">
+  <div class="small-2 large-4 columns">.small-2 .large-4</div>
+  <div class="small-4 large-4 columns">.small-4 .large-4</div>
+  <div class="small-6 large-4 columns">.small-6 .large-4</div>
+</div>
+<div class="row display">
+  <div class="large-3 columns">.large-3</div>
+  <div class="large-6 columns">.large-6</div>
+  <div class="large-3 columns">.large-3</div></div>
+<div class="row display">
+  <div class="small-6 large-2 columns">.small-6 .large-2</div>
+  <div class="small-6 large-8 columns">.small-6 .large-8</div>
+  <div class="small-12 large-2 columns">.small-12 .large-2</div>
+</div>
+
+<form ng-submit="action()" style="max-width: 600px; margin: 100px auto;">
+  <div class="row">
+    <div style="text-align: center;" class="small-12 columns">
+      <h2>계정 및 암호</h2>
+    </div>
+    <div class="small-6 columns">
+      <label>계정
+        <input type="text" required="" ng-model="info.id" ng-class="{'red' : !info.id}" placeholder="계정">
+      </label>
+    </div>
+    <div class="small-6 columns">
+      <label>암호
+        <input type="password" required="" ng-model="info.pw" ng-class="{'red' : !info.pw}" placeholder="암호">
+      </label>
+    </div>
+    <div class="small-12 columns">
+      <button class="button expanded">로그인</button>
+    </div>
+  </div>
+</form>
+
+<style>
+
+.red {
+  border: 2px solid red;
+}
+
+.row.display {
+  background: #eee;
+  font-size: 11px;
+  margin-bottom: 10px;
+  line-height: 2rem;
+  border: solid 1px #c6c6c6;
+
+  .columns {
+    &:nth-child(2),
+    &.small-centered,
+    &.large-centered {
+      background: darken(#eee, 5%);
+    }
+
+    &.color-end {
+      background: darken(#eee, 10%)
+    }
+  }
+}
+
+.row.display-end {
+  background: #fff;
+  font-size: 11px;
+  margin-bottom: 10px;
+  line-height: 2rem;
+  border: solid 1px #c6c6c6;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  .columns {
+    background: darken(#eee, 5%);
+    border-left: 1px solid #c6c6c6;
+
+    &.color-end {
+      background: darken(#eee, 10%)
+    }
+  }
+}
+
+[id^="docs-flex"].docs-component .docs-code-live {
+  @include foundation-flex-grid;
+
+  .row {
+    background: #f9f9f9;
+    font-size: 11px;
+    margin-bottom: 10px;
+    line-height: 2rem;
+    border: solid 1px #c6c6c6;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+
+    // Disable clearfix
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .column,
+  .columns {
+    float: none;
+    width: auto;
+
+    &:nth-child(odd) {
+      background: #eee;
+    }
+    &:nth-child(even) {
+      background: #ddd;
+    }
+  }
+}
+
+</style>

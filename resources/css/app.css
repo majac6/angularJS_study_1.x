@@ -1,0 +1,147 @@
+/* * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*/
+
+html {
+	font-size: 80%;
+}
+
+.ui-grid-menu-button {
+	background: none;
+	border: none;
+}
+
+/* grid  */
+.asf-grid .grid {
+	height: 200px;
+}
+.ui-grid-row .col-click {
+	cursor: pointer;
+	color: blue;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: grey;
+}
+td.resv {
+	background-color: #D1D1D1;
+	font-weight: bold;
+}
+
+/* form */
+form label {
+	font-weight: bold;
+}
+form div.row.border {
+	border: 1px solid #cacaca;
+	padding-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* line 225, ../sass/style-sass-renault.scss */
+#footer {
+  background: #F8B101;
+  color: #222;
+  margin-top: 30px;
+}
+/* line 236, ../sass/style-sass-renault.scss */
+#footer p {
+  color: #222;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* View: Phone list */
+.phones {
+  list-style: none;
+}
+
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+}
+
+/* View: Phone detail */
+.phone {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone:first-child {
+  display: block;
+}
+
+.phone-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}

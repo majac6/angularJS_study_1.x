@@ -1,0 +1,18 @@
+<style>
+.grid { width: 100%;height: 250px; }
+</style>
+
+<div class="row">
+  <div class="large-12 columns">
+    <h1 style="text-align: center;">Modal 안에 ui-grid 렌더링</h1>
+  </div>
+  <div class="large-offset-9 large-3 columns">
+    <div class="button-group">
+      <a ng-click="open(0)" class="button">Grid modal</a>
+      <a ng-click="open(1)" class="button">Calendar</a>
+    </div>
+  </div>
+  <div class="large-12 columns">
+    <div id="grid1" ui-grid="{ data: myData }" class="grid"></div>
+  </div>
+</div>

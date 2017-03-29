@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+
+    var parentCtrl = function($scope) {
+      $scope.text = 'Parent';
+      $scope.me = 'No.0';
+    }
+
+    app.controller('Controller0', parentCtrl);
+    app.controller('Controller1', function($scope) {
+      angular.extend(this, parentCtrl($scope));
+      $scope.me = 'No.1';
+    });
+    app.controller('Controller2', function($scope) {
+      angular.extend(this, parentCtrl($scope));
+      this.me = 'No.2';
+    });
+  </script>
+</head>
+<body>
+  <h3>communication between controllers, new way</h3>
+  <div ng-controller="Controller0">
+      {{me}} :<input ng-model="text">
+  </div>
+
+  <div ng-controller="Controller1">
+      {{me}} :<input ng-model="text" >
+  </div>
+
+  <div ng-controller="Controller2 as ctrl2">
+      {{ctrl2.me}} :<input ng-model="text" >
+  </div>
+</body>
+</html>

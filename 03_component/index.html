@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="angularStart">
+  <head>
+  </head>
+  <body>
+    <ui-view style="min-height: 500px;"></ui-view>
+  </body>
+
+<!-- Script 부분을 body 하단으로 옮김, Document.ready 의 효과가 있다. -->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+
+<!-- <script src="components/first/first.module.js"></script> -->
+<script src="components/first/first.component.js"></script>
+<!-- <script src="components/two/two.module.js"></script> -->
+<script src="components/two/two.component.js"></script>
+<!-- <script src="components/three/three.module.js"></script> -->
+<script src="components/three/three.component.js"></script>
+</html>
