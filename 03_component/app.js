@@ -5,12 +5,12 @@ angular
 .config(['$stateProvider', '$urlRouterProvider',  function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
   // $locationProvider.hashPrefix('');
-  // $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/home");
 
   $stateProvider
   .state('home', {
     url: '/home',
-    template: '<first-component></first-component>'
+    template: '<first-component value="123"></first-component>'
   })
   .state('home.two', {
     // parent: 'home',

@@ -1,5 +1,7 @@
 'use strict';
 
+var test;
+
 angular
 .module('angularStart')
 /*
@@ -9,5 +11,22 @@ angular
 .component('firstComponent', {
   // 컴포넌트 이름 이 이름을 html 으로 사용시 <first-component></first-component> 으로 사용해야 함.
   templateUrl: 'components/first/first.tem.html',
+  bindings: {
+    value: '='
+  },
+  controller: function($scope) {
+    var vm = this;
+    console.log(vm.value); // May not yet be available!
+    vm.$onInit = function() {
+      console.log(vm.value); // Guaranteed to be available!
+      $scope.value = vm.value;
+    }
+    /*
+    $postLink(),
+    $onChanges(),
+    $onDestroy()
+     */
+  },
+  controllerAs: 'first'
   // template: '<div>hihihihi</div>',
 });

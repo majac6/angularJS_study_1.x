@@ -31,26 +31,15 @@ angular
     template: '<three-component></three-component>'
   })
 }])
-// .controller('MainCtrl', function ($scope) {
+.run(function ($rootScope) {
+  // App 실행시 최초 1번 load 됨.
 
-//   $scope.myData = [
-//     {
-//         "firstName": "Cox",
-//         "lastName": "Carney",
-//         "company": "Enormo",
-//         "employed": true
-//     },
-//     {
-//         "firstName": "Lorraine",
-//         "lastName": "Wise",
-//         "company": "Comveyer",
-//         "employed": false
-//     },
-//     {
-//         "firstName": "Nancy",
-//         "lastName": "Waters",
-//         "company": "Fuelton",
-//         "employed": false
-//     }
-// ];
-// });;
+  $rootScope.$on('$locationChangeStart', function (event, next, current) {
+    console.log('Location Load Start');
+  });
+
+  $rootScope.$on('$stateChangeSuccess', function (event, next, current) {
+    console.log('State Load End');
+  });
+
+});
