@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="app">
 <head>
+<meta charset="utf-8">
 <style>
 .thumb {
     width: 200px;
@@ -30,7 +31,7 @@ form .progress {
 <body ng-app="fileUpload" ng-controller="MyCtrl">
   <!-- body를  angularjs app 으로 설정함. 개발자에 따라 html에 선언하는 경우도 있음. -->
 
-    <div class="button" ngf-drop ngf-select ng-model="files" ngf-multiple="true" accept="image/*">select</div>
+    <div class="button" ngf-drop ngf-select ng-model="files" ngf-multiple="true" accept="image/*" name="Photo">select</div>
     
   <br>
   Files:
@@ -64,11 +65,12 @@ app.controller('MyCtrl', ['$scope', 'Upload', '$timeout', function ($scope, Uplo
 
       $scope.files = files;
       angular.forEach(files, function(file) {
+        // console.log(files);
         if (file && !file.$error) {
           file.upload = Upload.upload({
             // url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
             url: url + 'upload',
-            file: file
+            file: file,
           });
 
           file.upload.then(
